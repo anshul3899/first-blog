@@ -36,6 +36,13 @@
 		<p>Science is the systematic study of any phenomenon with organised observations.<br/>So keep learning!<br/><em>“Strive not to be a success but rather to be of value”</em><br>-Albert Einstein<br/>Enjoy the beauty of physics  !<br/>This site has been created by Anshul Yadav.
 		</p>
 		</div>
+           {% for post in posts %}
+          <div id="post">
+             <p id="timestamp">published: {{ post.published_date }}</p>
+              <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+         </div>
+          {% endfor %}
 
 	</body>
 	</HTML>
